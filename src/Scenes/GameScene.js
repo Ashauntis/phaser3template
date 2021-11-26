@@ -28,6 +28,6 @@ export default class GameScene extends Phaser.Scene {
 
     this.anims.create(config);
 
-    this.add.sprite(800 / 2 + 128 / 2, 0, "intro").play("introAnimation");
+    this.add.sprite(800 / 2 , 600 / 2, "intro").play("introAnimation");
   }
 }

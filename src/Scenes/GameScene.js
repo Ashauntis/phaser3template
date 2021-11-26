@@ -1,7 +1,7 @@
 import "phaser";
 
 export default class GameScene extends Phaser.Scene {
-  
+
   constructor() {
     super("Game");
   }
@@ -28,6 +28,6 @@ export default class GameScene extends Phaser.Scene {
 
     this.anims.create(config);
 
-    this.add.sprite(0, 0, "intro").play("introAnimation");
+    this.add.sprite(800 / 2 + 128 / 2, 0, "intro").play("introAnimation");
   }
 }

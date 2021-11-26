@@ -1,12 +1,13 @@
 import "phaser";
 
 export default class GameScene extends Phaser.Scene {
+  
   constructor() {
     super("Game");
   }
 
   preload() {
-    this.load.spritesheet("intro", "assets/sprites/intro.png", {
+    this.load.spritesheet("intro", "assets/intro.png", {
       frameWidth: 128,
       frameHeight: 128,
       endFrame: 290,

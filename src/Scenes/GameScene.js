@@ -1,16 +1,32 @@
-import 'phaser';
+import "phaser";
 
 export default class GameScene extends Phaser.Scene {
-  constructor () {
-    super('Game');
+  constructor() {
+    super("Game");
   }
 
-  preload () {
-    // load images
-    this.load.image('logo', 'assets/logo.png');
+  preload() {
+    this.load.spritesheet("intro", "assets/sprites/intro.png", {
+      frameWidth: 128,
+      frameHeight: 128,
+      endFrame: 290,
+    });
   }
 
-  create () {
-    this.add.image(400, 300, 'logo');
+  create() {
+    var config = {
+      key: "introAnimation",
+      frames: this.anims.generateFrameNumbers("intro", {
+        start: 0,
+        end: 290,
+        first: 23,
+      }),
+      frameRate: 60,
+      repeat: -1,
+    };
+
+    this.anims.create(config);
+
+    this.add.sprite(0, 0, "intro").play("introAnimation");
   }
-};
+}
